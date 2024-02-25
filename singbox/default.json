@@ -8,7 +8,7 @@
     "servers": [
       {
         "tag": "dns_proxy",
-        "address": "1.1.1.1",
+        "address": "https://1.1.1.1/dns-query",
         "address_resolver": "dns_direct",
         "strategy": "prefer_ipv4",
         "detour": "proxy"
@@ -43,25 +43,19 @@
         "outbound": "any",
         "server": "dns_direct"
       }
-    ],   
-    "reverse_mapping": true,
-    "strategy": "prefer_ipv4",
-    "independent_cache": true
+    ]
   },
-  "inbounds": [    
+  "inbounds": [
     {
       "type": "tun",
       "tag": "tun-in",
       "domain_strategy": "prefer_ipv4",
-      "interface_name": "tun0",
+      "mtu": 1400,
       "inet4_address": "172.19.0.1/30",
-      "mtu": 9000,
       "auto_route": true,
       "strict_route": true,
-      "stack": "system",
-      "endpoint_independent_nat": true,
-      "sniff": true,
-      "sniff_override_destination": false
+      "stack": "gvisor",
+      "sniff": true
     }
   ],
   "outbounds": [
@@ -93,12 +87,10 @@
   ],
   "route": {
     "geoip": {
-      "download_url": "https://github.com/Chocolate4U/Iran-sing-box-rules/releases/latest/download/geoip.db",
-      "download_detour": "direct"
+      "download_url": "https://github.com/Chocolate4U/Iran-sing-box-rules/releases/latest/download/geoip.db"
     },
     "geosite": {
-      "download_url": "https://github.com/Chocolate4U/Iran-sing-box-rules/releases/latest/download/geosite.db",
-      "download_detour": "direct"
+      "download_url": "https://github.com/Chocolate4U/Iran-sing-box-rules/releases/latest/download/geosite.db"
     },
     "rules": [
       {
