@@ -12,10 +12,9 @@
 لیستی از تمپلیت های شخصی سازی شده برای مرزبان
 
 # لیست تمپلیت ها
-- [تمپلیت برای clash و clash-meta](https://github.com/oXIIIo/marzban-template/tree/master/clash)
 - [تمپلیت برای sing-box](https://github.com/oXIIIo/marzban-template/tree/master/singbox)
 - [صفحه سابسکریپشن](https://github.com/oXIIIo/marzban-template/tree/master/subscription)
-- [صفحه خانه](https://github.com/oXIIIo/marzban-template/tree/master/home)
+- [تنظیم mux sing-box](https://github.com/oXIIIo/marzban-template/tree/master/mux)
 
 
 # مراحل نصب
@@ -25,10 +24,7 @@
 برای نصب همه تمپلیت های موجو دستورات زیر را در ترمینال سرور خود اجرا کنید:
 1. دانلود فایل های تمپلیت
 ```sh
-sudo wget -N -P /var/lib/marzban/templates/clash/ https://raw.githubusercontent.com/oXIIIo/marzban-template/master/clash/default.yml
 sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/oXIIIo/marzban-template/master/singbox/default.json
-sudo wget -N -P /var/lib/marzban/templates/subscription/ https://raw.githubusercontent.com/oXIIIo/marzban-template/master/subscription/index.html
-sudo wget -N -P /var/lib/marzban/templates/home/ https://raw.githubusercontent.com/oXIIIo/marzban-template/master/home/index.html
 ```
 2. دستورات زیر رو تو ترمینال سرورتون بزنید:
 ```sh
@@ -49,6 +45,7 @@ marzban restart
 
 # حمایت از من
 
-<a href="https://nowpayments.io/donation?api_key=MG750CX-D7AMMH9-QWARQ7V-9ZKH9XQ&source=lk_donation&medium=referral" target="_blank">
-  <img src="https://nowpayments.io/images/embeds/donation-button-black.svg" alt="Crypto donation button by NOWPayments">
-</a>
+
+    <a href="https://nowpayments.io/donation?api_key=WE3KFT5-2VKMNSF-N1P4YQ6-24N82ZA&source=lk_donation&medium=referral" target="_blank">
+     <img src="https://nowpayments.io/images/embeds/donation-button-black.svg" alt="Crypto donation button by NOWPayments">
+    </a>
