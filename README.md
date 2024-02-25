@@ -1,37 +1,47 @@
 <p align="center">
-  <a href="https://github.com/WhyMan1/marzban-template/" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/WhyMan1/marzban-template/tree/master/singbox" target="_blank" rel="noopener noreferrer">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Gozargah/Marzban-docs/master/screenshots/logo-dark.png">
-      <img width="160" height="160" src="https://raw.githubusercontent.com/Gozargah/Marzban-docs/master/screenshots/logo-dark.png">
+      <source media="(prefers-color-scheme: dark)" srcset="https://sing-box.sagernet.org/assets/icon.svg">
+      <img width="160" height="160" src="https://sing-box.sagernet.org/assets/icon.svg">
     </picture>
   </a>
 </p>
-<h1 align="center"/>تمپلیت های مختلف برای پنل  <a href="https://github.com/Gozargah/Marzban">مرزبان</a></h1>
+<h1 align="center"/>sing-box config example for <a href="https://github.com/Gozargah/Marzban">Marzban</a></h1>
+
+## فهرست مطالب
+- [مقدمه](#مقدمه)
+- [ویژگی‌ ها](#ویژگی-ها)
+- [مراحل نصب](#مراحل-نصب)
+- [لینک دانلود کلش متا](#لینک-دانلود-کلش-متا)
 
 # مقدمه
-لیستی از تمپلیت های شخصی سازی شده برای مرزبان
+سینگ باکس یک پروکسی مبتنی بر قوانین است که به شما این امکان را می‌دهد که تنظیمات مربوط به برنامه از قبیل DNS و مسیریابی و ... را از سمت سرور انجام دهید. در این template از سمت سرور، سینگ باکس  را به گونه‌ای شده است که اتصال به سایت‌های ایرانی به صورت مستقیم انجام شود.
+از مهم ترین ویژگی کلاینت sing-box پشتیبانی از پلتفرم های مختلف مانند اندروید، iOS، macOS و ... می باشد.
 
-# لیست تمپلیت ها
-- [تمپلیت برای sing-box](https://github.com/WhyMan1/marzban-template/tree/master/singbox)
-- [تنظیم mux sing-box](https://github.com/WhyMan1/marzban-template/tree/master/mux)
-
+# ویژگی ها
+- وصل شدن به سریع ترین کانفیگ
+- وصل شدن مستقیم به وب‌سایت‌های ایرانی هنگامی که فیلترشکن روشن است
+- بلاک کردن تبلیغات
+و ...
 
 # مراحل نصب
-برای نصب هر تمپلیت به صفحه مربوط به آن مراجعه کنید
-
-# نصب همه
-برای نصب همه تمپلیت های موجو دستورات زیر را در ترمینال سرور خود اجرا کنید:
-1. دانلود فایل های تمپلیت
+1. دانلود فایل template
 ```sh
 sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-template/master/singbox/default.json
+sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-template/master/singbox/mux_conf.json
 ```
+
 2. دستورات زیر رو تو ترمینال سرورتون بزنید:
 ```sh
 echo 'CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"' | sudo tee -a /opt/marzban/.env
+echo 'SINGBOX_SUBSCRIPTION_TEMPLATE="singbox/default.json"' | sudo tee -a /opt/marzban/.env
+echo 'SINGBOX_MUX_CONFIGURATION="singbox/mux_conf.json"' | sudo tee -a /opt/marzban/.env
 ```
 یا مقادیر زیر رو در فایل `.env` در پوشه `/opt/marzban` قرار بدین
 ```sh
 CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"
+SINGBOX_SUBSCRIPTION_TEMPLATE="singbox/default.json"
+SINGBOX_MUX_CONFIGURATION = "singbox/mux_conf.json"
 ```
 
 3. ری استارت مرزبان
@@ -40,7 +50,17 @@ marzban restart
 ```
 
 ## بروزرسانی
-برای بروزرسانی تمپلیت ها فقط کافیست مرحله 1 را تکرار کنید.
+برای بروزرسانی تمپلیت فقط کافیست مرحله 1 را تکرار کنید.
+
+# لینک دانلود sing-box
+- Android:
+   - [SFA AppCenter](https://install.appcenter.ms/users/nekohasekai/apps/sfa/distribution_groups/publictest)
+   - [SFA Github](https://github.com/SagerNet/sing-box/releases)
+   - [SFA Google Play](https://play.google.com/store/apps/details?id=io.nekohasekai.sfa)
+- iOS:
+  - [SFI](https://apps.apple.com/us/app/sing-box/id6451272673)
+- macOS：
+  - [SFM](https://apps.apple.com/us/app/sing-box/id6451272673)
 
 # حمایت از من
 
