@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/oXIIIo/marzban-template/tree/master/singbox" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/WhyMan1/marzban-template/tree/master/singbox" target="_blank" rel="noopener noreferrer">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://sing-box.sagernet.org/assets/icon.svg">
       <img width="160" height="160" src="https://sing-box.sagernet.org/assets/icon.svg">
@@ -27,7 +27,7 @@
 # مراحل نصب
 1. دانلود فایل template
 ```sh
-sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/oXIIIo/marzban-template/master/singbox/default.json
+sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-template/master/singbox/default.json
 ```
 
 2. دستورات زیر رو تو ترمینال سرورتون بزنید:
@@ -60,6 +60,7 @@ marzban restart
 
 # حمایت از من
 
-<a href="https://nowpayments.io/donation?api_key=MG750CX-D7AMMH9-QWARQ7V-9ZKH9XQ&source=lk_donation&medium=referral" target="_blank">
-  <img src="https://nowpayments.io/images/embeds/donation-button-black.svg" alt="Crypto donation button by NOWPayments">
-</a>
+
+    <a href="https://nowpayments.io/donation?api_key=WE3KFT5-2VKMNSF-N1P4YQ6-24N82ZA&source=lk_donation&medium=referral" target="_blank">
+     <img src="https://nowpayments.io/images/embeds/donation-button-black.svg" alt="Crypto donation button by NOWPayments">
+    </a>
