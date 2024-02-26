@@ -15,7 +15,7 @@
       },
       {
         "address": "tcp://185.228.168.9",
-        "address_resolver": "dns-local",
+        "address_resolver": "dns_local",
         "detour": "direct",
         "strategy": "ipv4_only",
         "tag": "dns-direct"
