@@ -7,16 +7,22 @@
   "dns": {
     "servers": [
       {
-        "tag": "dns_proxy",
+        "tag": "dns_remote",
         "address": "https://1.1.1.1/dns-query",
         "address_resolver": "dns_direct",
         "strategy": "prefer_ipv4",
         "detour": "proxy"
       },
       {
+        "address": "tcp://185.228.168.9",
+        "address_resolver": "dns-local",
+        "detour": "direct",
+        "strategy": "ipv4_only",
+        "tag": "dns-direct"
+      },
+      {
         "tag": "dns_direct",
         "address": "local",
-        "strategy": "prefer_ipv4",
         "detour": "direct"
       },
       {
@@ -26,36 +32,64 @@
     ],
     "rules": [
       {
-        "geosite": [
-          "category-ads-all",
-          "malware",
-          "phishing",
-          "cryptominers"
-        ],
+        "geosite": ["category-ads-all", "malware", "phishing", "cryptominers"],
         "server": "dns_block",
         "disable_cache": true
+      },
+      {
+        "domain_suffix": [".ir"],
+        "server": "dns-direct"
       },
       {
         "geosite": "ir",
         "server": "dns_direct"
       },
       {
+        "outbound": "direct",
+        "server": "dns-direct",
+        "rewrite_ttl": 20
+      },
+      {
         "outbound": "any",
-        "server": "dns_direct"
+        "server": "dns-direct",
+        "rewrite_ttl": 20
       }
-    ]
+    ],
+    "reverse_mapping": true,
+    "strategy": "ipv4_only",
+    "independent_cache": true
   },
   "inbounds": [
     {
+      "listen": "0.0.0.0",
+      "listen_port": 6450,
+      "override_address": "8.8.8.8",
+      "override_port": 53,
+      "tag": "dns-in",
+      "type": "direct"
+    },
+    {
       "type": "tun",
       "tag": "tun-in",
-      "domain_strategy": "prefer_ipv4",
-      "mtu": 1400,
+      "domain_strategy": "",
+      "interface_name": "tun0",
       "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
       "auto_route": true,
       "strict_route": true,
-      "stack": "gvisor",
-      "sniff": true
+      "stack": "system",
+      "endpoint_independent_nat": true,
+      "sniff": true,
+      "sniff_override_destination": false
+    },
+    {
+      "domain_strategy": "",
+      "listen": "0.0.0.0",
+      "listen_port": 2080,
+      "sniff": true,
+      "sniff_override_destination": false,
+      "tag": "mixed-in",
+      "type": "mixed"
     }
   ],
   "outbounds": [
@@ -87,6 +121,9 @@
     }
   ],
   "route": {
+    "auto_detect_interface": true,
+    "override_android_vpn": true,
+    "final": "proxy",
     "geoip": {
       "download_url": "https://github.com/Chocolate4U/Iran-sing-box-rules/releases/latest/download/geoip.db"
     },
@@ -95,27 +132,23 @@
     },
     "rules": [
       {
-        "protocol": "dns",
+        "outbound": "dns-out",
+        "port": [53]
+      },
+      {
+        "inbound": ["dns-in"],
         "outbound": "dns-out"
       },
       {
-        "protocol": "quic",
+        "domain_suffix": [".ir"],
+        "outbound": "direct"
+      },
+      {
+        "geosite": ["category-ads-all", "malware", "phishing", "cryptominers"],
         "outbound": "block"
       },
       {
-        "geosite": [
-          "category-ads-all",
-          "malware",
-          "phishing",
-          "cryptominers"
-        ],
-        "outbound": "block"
-      },
-      {
-        "geoip": [
-          "malware",
-          "phishing"
-        ],
+        "geoip": ["malware", "phishing"],
         "outbound": "block"
       },
       {
@@ -123,13 +156,7 @@
         "outbound": "direct"
       },
       {
-        "geoip": [
-          "ir",
-          "private",
-          "arvancloud",
-          "derakcloud",
-          "iranserver"
-        ],
+        "geoip": ["ir", "private", "arvancloud", "derakcloud", "iranserver"],
         "outbound": "direct"
       },
       {
@@ -137,9 +164,7 @@
         "outbound": "block",
         "source_ip_cidr": ["224.0.0.0/3", "ff00::/8"]
       }
-    ],
-    "auto_detect_interface": true,
-    "override_android_vpn": true
+    ]
   },
   "experimental": {
     "clash_api": {
