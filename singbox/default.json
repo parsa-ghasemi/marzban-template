@@ -7,33 +7,33 @@
   "dns": {
     "servers": [
       {
-        "tag": "dns_remote",
+        "tag": "dns-remote",
         "address": "https://1.1.1.1/dns-query",
-        "address_resolver": "dns_direct",
+        "address_resolver": "dns-direct",
         "strategy": "prefer_ipv4",
         "detour": "proxy"
       },
       {
         "address": "tcp://185.228.168.9",
-        "address_resolver": "dns_local",
+        "address_resolver": "dns-local",
         "detour": "direct",
         "strategy": "ipv4_only",
-        "tag": "dns_direct"
+        "tag": "dns-direct"
       },
       {
-        "tag": "dns_local",
+        "tag": "dns-local",
         "address": "local",
         "detour": "direct"
       },
       {
-        "tag": "dns_block",
+        "tag": "dns-block",
         "address": "rcode://success"
       }
     ],
     "rules": [
       {
         "geosite": ["category-ads-all", "malware", "phishing", "cryptominers"],
-        "server": "dns_block",
+        "server": "dns-block",
         "disable_cache": true
       },
       {
@@ -42,7 +42,7 @@
       },
       {
         "geosite": "ir",
-        "server": "dns_direct"
+        "server": "dns-direct"
       },
       {
         "outbound": "direct",
