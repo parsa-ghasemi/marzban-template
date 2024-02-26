@@ -18,7 +18,7 @@
         "address_resolver": "dns_local",
         "detour": "direct",
         "strategy": "ipv4_only",
-        "tag": "dns-direct"
+        "tag": "dns_direct"
       },
       {
         "tag": "dns_local",
