@@ -21,7 +21,7 @@
         "tag": "dns-direct"
       },
       {
-        "tag": "dns_direct",
+        "tag": "dns_local",
         "address": "local",
         "detour": "direct"
       },
