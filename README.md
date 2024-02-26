@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/WhyMan1/marzban-template/tree/master/singbox" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/WhyMan1/marzban-singbox-template/tree/master/singbox" target="_blank" rel="noopener noreferrer">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://sing-box.sagernet.org/assets/icon.svg">
       <img width="160" height="160" src="https://sing-box.sagernet.org/assets/icon.svg">
@@ -27,8 +27,8 @@
 # مراحل نصب
 1. دانلود فایل template
 ```sh
-sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-template/master/singbox/default.json
-sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-template/master/singbox/mux_conf.json
+sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-singbox-template/master/singbox/default.json
+sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-singbox-template/master/singbox/mux_conf.json
 ```
 
 2. دستورات زیر رو تو ترمینال سرورتون بزنید:
