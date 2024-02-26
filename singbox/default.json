@@ -51,11 +51,11 @@
           "geosite-phishing",
           "geosite-cryptominers"
         ],
-        "outbound": "block"
+        "server": "dns-block"
       },
       {
         "rule_set": ["geosite-ir"],
-        "outbound": "direct"
+        "server": "dns-direct"
       },
       {
         "domain_suffix": [".ir"],
