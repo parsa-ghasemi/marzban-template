@@ -32,19 +32,6 @@
     ],
     "rules": [
       {
-        "domain": [
-          "github.com",
-          "githubusercontent.com",
-          "1.1.1.1",
-          "www.globalwitness.org",
-          "yoursub.com",
-          "yourdomains.com",
-          "yourdomains1.com",
-          "yourdomains2.com"
-        ],
-        "server": "dns-local"
-      },
-      {
         "rule_set": [
           "geosite-category-ads-all",
           "geosite-malware",
@@ -62,12 +49,11 @@
         "server": "dns-direct"
       },
       {
-        "outbound": "direct",
+        "outbound": "any",
         "server": "dns-direct",
         "rewrite_ttl": 20
       }
     ],
-    "final": "dns-remote",
     "reverse_mapping": true,
     "strategy": "ipv4_only",
     "independent_cache": true
