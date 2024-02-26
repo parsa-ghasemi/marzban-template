@@ -69,8 +69,9 @@
       "tag": "⚡️ Auto",
       "outbounds": null,
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "10m",
-      "tolerance": 200
+      "interval": "3m",
+      "tolerance": 200,
+      "interrupt_exist_connections": false
     },
     {
       "type": "direct",
