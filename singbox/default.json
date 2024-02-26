@@ -9,7 +9,7 @@
       {
         "tag": "dns-remote",
         "address": "https://1.1.1.1/dns-query",
-        "address_resolver": "dns-local",
+        "address_resolver": "dns-direct",
         "strategy": "prefer_ipv4",
         "detour": "proxy"
       },
@@ -32,16 +32,11 @@
     ],
     "rules": [
       {
-        "geosite": ["category-ads-all", "malware", "phishing", "cryptominers"],
-        "server": "dns-block",
-        "disable_cache": true
-      },
-      {
-        "domain_suffix": [".ir"],
+        "geosite": "ir",
         "server": "dns-direct"
       },
       {
-        "geosite": "ir",
+        "domain_suffix": [".ir"],
         "server": "dns-direct"
       },
       {
