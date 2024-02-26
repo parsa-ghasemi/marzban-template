@@ -45,13 +45,17 @@
         "server": "dns-local"
       },
       {
-        "geosite": ["category-ads-all", "malware", "phishing", "cryptominers"],
-        "server": "dns-block",
-        "disable_cache": true
+        "rule_set": [
+          "geosite-category-ads-all",
+          "geosite-malware",
+          "geosite-phishing",
+          "geosite-cryptominers"
+        ],
+        "outbound": "block"
       },
       {
-        "geosite": "ir",
-        "server": "dns-direct"
+        "rule_set": ["geosite-ir"],
+        "outbound": "direct"
       },
       {
         "domain_suffix": [".ir"],
@@ -133,12 +137,56 @@
     "auto_detect_interface": true,
     "override_android_vpn": true,
     "final": "proxy",
-    "geoip": {
-      "download_url": "https://github.com/Chocolate4U/Iran-sing-box-rules/releases/latest/download/geoip.db"
-    },
-    "geosite": {
-      "download_url": "https://github.com/Chocolate4U/Iran-sing-box-rules/releases/latest/download/geosite.db"
-    },
+    "rule_set": [
+      {
+        "tag": "geosite-ir",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-ir.srs"
+      },
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-category-ads-all.srs"
+      },
+      {
+        "tag": "geosite-malware",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-malware.srs"
+      },
+      {
+        "tag": "geosite-phishing",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-phishing.srs"
+      },
+      {
+        "tag": "geosite-cryptominers",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geosite-cryptominers.srs"
+      },
+      {
+        "tag": "geoip-ir",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-ir.srs"
+      },
+      {
+        "tag": "geoip-malware",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-malware.srs"
+      },
+      {
+        "tag": "geoip-phishing",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-phishing.srs"
+      }
+    ],
     "rules": [
       {
         "outbound": "dns-out",
@@ -153,19 +201,22 @@
         "outbound": "direct"
       },
       {
-        "geosite": ["category-ads-all", "malware", "phishing", "cryptominers"],
-        "outbound": "block"
-      },
-      {
-        "geoip": ["malware", "phishing"],
-        "outbound": "block"
-      },
-      {
-        "geosite": "ir",
+        "ip_is_private": true,
         "outbound": "direct"
       },
       {
-        "geoip": ["ir", "private", "arvancloud", "derakcloud", "iranserver"],
+        "rule_set": [
+          "geosite-category-ads-all",
+          "geosite-malware",
+          "geosite-phishing",
+          "geosite-cryptominers",
+          "geoip-malware",
+          "geoip-phishing"
+        ],
+        "outbound": "block"
+      },
+      {
+        "rule_set": ["geosite-ir", "geoip-ir"],
         "outbound": "direct"
       },
       {
