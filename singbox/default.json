@@ -32,6 +32,24 @@
     ],
     "rules": [
       {
+        "domain": [
+          "github.com",
+          "githubusercontent.com",
+          "1.1.1.1",
+          "www.globalwitness.org",
+          "yoursub.com",
+          "yourdomains.com",
+          "yourdomains1.com",
+          "yourdomains2.com"
+        ],
+        "server": "dns-local"
+      },
+      {
+        "geosite": ["category-ads-all", "malware", "phishing", "cryptominers"],
+        "server": "dns-block",
+        "disable_cache": true
+      },
+      {
         "geosite": "ir",
         "server": "dns-direct"
       },
