@@ -156,6 +156,10 @@
     ],
     "rules": [
       {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
         "domain_suffix": [".ir"],
         "outbound": "direct"
       },

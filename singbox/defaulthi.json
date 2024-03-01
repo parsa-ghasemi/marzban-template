@@ -165,7 +165,11 @@
         "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-sing-box-rules/rule-set/geoip-phishing.srs"
       }
     ],
-    "rules": [
+    "rules": [     
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
       {
         "domain_suffix": [".ir"],
         "outbound": "direct"
