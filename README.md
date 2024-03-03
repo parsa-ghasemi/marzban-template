@@ -34,7 +34,7 @@ sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubuserconten
 ```sh
 sudo nano /var/lib/marzban/templates/singbox/default.json
 ```
-حدود خط ۴۰ دامنه های خود را با configsubdomain.yourdomains1.com جایگزین کنید لوکال بخواند (دقت بفرمایید حتما هنگام نوشتن از حروف بزرگ انگلیسی استفاده نکنید)
+حدود خط ۴۰ دامنه‌های کانفیگ‌های (Addresses) خود را با configsubdomain.yourdomains1.com جایگزین کنید لوکال بخواند (دقت بفرمایید حتما هنگام نوشتن از حروف بزرگ انگلیسی استفاده نکنید)
 
 3. دستورات زیر رو تو ترمینال سرورتون بزنید:
 ```sh
