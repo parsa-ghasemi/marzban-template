@@ -30,11 +30,11 @@
 sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-singbox-template/master/singbox/default.json
 sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-singbox-template/master/singbox/mux_conf.json
 ```
-2. باید دامین‌های کانفیگ‌ها را در این قسمت وارد کنیم تا آن‌را از dns 
+2. باید دامین‌های کانفیگ‌ها را در این قسمت وارد کنیم تا آن‌را از dns لوکال بخواند
 ```sh
 sudo nano /var/lib/marzban/templates/singbox/default.json
 ```
-حدود خط ۴۰ دامنه‌های کانفیگ‌های (Addresses) خود را با configsubdomain.yourdomains1.com جایگزین کنید تا از dns لوکال بخواند (دقت بفرمایید حتما هنگام نوشتن از حروف بزرگ انگلیسی استفاده نکنید)
+حدود خط ۴۰ دامنه‌های کانفیگ‌های (Addresses) خود را با configsubdomain.yourdomains1.com جایگزین کنید  (دقت بفرمایید حتما هنگام نوشتن از حروف بزرگ انگلیسی استفاده نکنید)
 
 3. دستورات زیر رو تو ترمینال سرورتون بزنید:
 ```sh
