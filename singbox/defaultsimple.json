@@ -8,22 +8,23 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "https://1.1.1.2/dns-query",
+        "address": "https://1.1.1.1/dns-query",
         "address_resolver": "dns-direct",
         "strategy": "prefer_ipv4",
         "detour": "proxy"
       },
       {
         "tag": "dns-direct",
-        "address": "1.1.1.2",
+        "address": "1.1.1.1",
         "address_resolver": "dns-local",
         "strategy": "prefer_ipv4",
         "detour": "direct"
+        
       },
       {
         "tag": "dns-local",
         "address": "local",
-        "strategy": "prefer_ipv6",
+        "strategy": "prefer_ipv4",
         "detour": "direct"
       },
       {
@@ -32,16 +33,6 @@
       }
     ],
     "rules": [
-      {
-        "domain": [
-          "github.com",
-          "githubusercontent.com",
-          "subdomain.yoursub.com",
-          "configsubdomain.yourdomains1.com",
-          "configsubdomain.yourdomains2.com"
-        ],
-        "server": "dns-local"
-      },
       {
         "rule_set": [
           "geosite-category-ads-all",
@@ -60,12 +51,11 @@
         "server": "dns-direct"
       },
       {
-        "outbound": "direct",
+        "outbound": "any",
         "server": "dns-direct",
         "rewrite_ttl": 20
       }
     ],
-    "final": "dns-remote",
     "reverse_mapping": true,
     "strategy": "prefer_ipv4",
     "independent_cache": true

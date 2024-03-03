@@ -27,12 +27,12 @@
 # مراحل نصب
 1. دانلود فایل template
 ```sh
-sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-singbox-template/master/singbox/defaulthi.json
+sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-singbox-template/master/singbox/default.json
 sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-singbox-template/master/singbox/mux_conf.json
 ```
 2. باید دامین‌های کانفیگ‌ها را در این قسمت وارد کنیم تا آن‌را از dns لوکال بخواند
 ```sh
-sudo nano /var/lib/marzban/templates/singbox/defaulthi.json
+sudo nano /var/lib/marzban/templates/singbox/default.json
 ```
 حدود خط ۴۰ دامنه های خود را با configsubdomain.yourdomains1.com جایگزین کنید
 
@@ -43,7 +43,7 @@ sudo nano /opt/marzban/.env
 و مقادیر زیر رو در فایل `.env` در پوشه `/opt/marzban` قرار بدین
 ```sh
 CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"
-SINGBOX_SUBSCRIPTION_TEMPLATE="singbox/defaulthi.json"
+SINGBOX_SUBSCRIPTION_TEMPLATE="singbox/default.json"
 SINGBOX_MUX_CONFIGURATION = "singbox/mux_conf.json"
 ```
 
