@@ -14,11 +14,11 @@
         "detour": "proxy"
       },
       {
+        "tag": "dns-direct",
         "address": "1.1.1.2",
         "address_resolver": "dns-local",
-        "detour": "direct",
         "strategy": "prefer_ipv4",
-        "tag": "dns-direct"
+        "detour": "direct"
       },
       {
         "tag": "dns-local",
@@ -36,7 +36,6 @@
         "domain": [
           "github.com",
           "githubusercontent.com",
-          "1.1.1.1",
           "yourdomains.com",
           "yourdomains1.com",
           "yourdomains2.com"
