@@ -27,20 +27,25 @@
 # مراحل نصب
 1. دانلود فایل template
 ```sh
-sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-singbox-template/master/singbox/default.json
+sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-singbox-template/master/singbox/defaulthi.json
 sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-singbox-template/master/singbox/mux_conf.json
 ```
+2. باید دامین‌های کانفیگ‌ها را در این قسمت وارد کنیم تا آن‌را از dns لوکال بخواند
+```sh
+sudo nano /var/lib/marzban/templates/singbox/defaulthi.json
+```
+حدود خط ۴۰ دامنه های خود را با configsubdomain.yourdomains1.com جایگزین کنید
 
-2. دستورات زیر رو تو ترمینال سرورتون بزنید:
+3. دستورات زیر رو تو ترمینال سرورتون بزنید:
 ```sh
 echo 'CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"' | sudo tee -a /opt/marzban/.env
-echo 'SINGBOX_SUBSCRIPTION_TEMPLATE="singbox/default.json"' | sudo tee -a /opt/marzban/.env
+echo 'SINGBOX_SUBSCRIPTION_TEMPLATE="singbox/defaulthi.json"' | sudo tee -a /opt/marzban/.env
 echo 'SINGBOX_MUX_CONFIGURATION="singbox/mux_conf.json"' | sudo tee -a /opt/marzban/.env
 ```
 یا مقادیر زیر رو در فایل `.env` در پوشه `/opt/marzban` قرار بدین
 ```sh
 CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"
-SINGBOX_SUBSCRIPTION_TEMPLATE="singbox/default.json"
+SINGBOX_SUBSCRIPTION_TEMPLATE="singbox/defaulthi.json"
 SINGBOX_MUX_CONFIGURATION = "singbox/mux_conf.json"
 ```
 
@@ -50,7 +55,7 @@ marzban restart
 ```
 
 ## بروزرسانی
-برای بروزرسانی تمپلیت فقط کافیست مرحله 1 را تکرار کنید.
+برای بروزرسانی تمپلیت فقط کافیست مرحله ۱ و ۲ را تکرار کنید.
 
 # لینک دانلود sing-box
 - Android:

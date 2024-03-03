@@ -36,9 +36,9 @@
         "domain": [
           "github.com",
           "githubusercontent.com",
-          "yourdomains.com",
-          "yourdomains1.com",
-          "yourdomains2.com"
+          "subdomain.yoursub.com",
+          "configsubdomain.yourdomains1.com",
+          "configsubdomain.yourdomains2.com"
         ],
         "server": "dns-local"
       },
