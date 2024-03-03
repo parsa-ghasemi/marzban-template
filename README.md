@@ -38,11 +38,9 @@ sudo nano /var/lib/marzban/templates/singbox/defaulthi.json
 
 3. دستورات زیر رو تو ترمینال سرورتون بزنید:
 ```sh
-echo 'CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"' | sudo tee -a /opt/marzban/.env
-echo 'SINGBOX_SUBSCRIPTION_TEMPLATE="singbox/defaulthi.json"' | sudo tee -a /opt/marzban/.env
-echo 'SINGBOX_MUX_CONFIGURATION="singbox/mux_conf.json"' | sudo tee -a /opt/marzban/.env
+sudo nano /opt/marzban/.env
 ```
-یا مقادیر زیر رو در فایل `.env` در پوشه `/opt/marzban` قرار بدین
+و مقادیر زیر رو در فایل `.env` در پوشه `/opt/marzban` قرار بدین
 ```sh
 CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"
 SINGBOX_SUBSCRIPTION_TEMPLATE="singbox/defaulthi.json"
