@@ -94,10 +94,9 @@
       "type": "urltest",
       "tag": "⚡️ Auto",
       "outbounds": null,
-      "url": "http://www.google.com/gen_204",
+      "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
-      "tolerance": 200,
-      "interrupt_exist_connections": false
+      "tolerance": 200
     },
     {
       "type": "direct",
