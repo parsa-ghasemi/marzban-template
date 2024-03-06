@@ -59,8 +59,8 @@
         "server": "dns-local"
       },
       {
-        "outbound": "direct",
-        "server": "dns-direct",
+        "outbound": "any",
+        "server": "dns-local",
         "rewrite_ttl": 20
       }
     ],

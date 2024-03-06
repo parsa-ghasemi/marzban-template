@@ -49,6 +49,11 @@
       {
         "domain_suffix": [".ir"],
         "server": "dns-local"
+      },
+      {
+        "outbound": "any",
+        "server": "dns-local",
+        "rewrite_ttl": 20
       }
     ],
     "final": "dns-local",
