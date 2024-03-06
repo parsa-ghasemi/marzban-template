@@ -80,8 +80,7 @@
       "auto_route": true,
       "strict_route": true,
       "stack": "mixed",
-      "sniff": true,
-      "interrupt_exist_connections": false
+      "sniff": true
     }
   ],
   "outbounds": [
