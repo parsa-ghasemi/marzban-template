@@ -8,16 +8,15 @@
     "servers": [
       {
         "tag": "dns-remote",
-        "address": "https://1.1.1.2/dns-query",
+        "address": "https://1.1.1.1/dns-query",
         "address_resolver": "dns-direct",
         "strategy": "prefer_ipv4",
         "detour": "proxy"
       },
       {
         "tag": "dns-direct",
-        "address": "1.1.1.2",
-        "address_resolver": "dns-local",
-        "strategy": "prefer_ipv4",
+        "address": "1.1.1.1",
+        "strategy": "prefer_ipv6",
         "detour": "direct"
         
       },
@@ -52,11 +51,11 @@
       },
       {
         "outbound": "any",
-        "server": "dns-local",
+        "server": "dns-direct",
         "rewrite_ttl": 20
       }
     ],
-    "final": "dns-local",
+    "final": "dns-direct",
     "reverse_mapping": true,
     "strategy": "prefer_ipv4",
     "independent_cache": true
