@@ -19,6 +19,7 @@
         "address_resolver": "dns-local",
         "strategy": "prefer_ipv4",
         "detour": "direct"
+        
       },
       {
         "tag": "dns-local",
@@ -33,16 +34,6 @@
     ],
     "rules": [
       {
-        "domain": [
-          "github.com",
-          "githubusercontent.com",
-          "subdomain.yoursub.com",
-          "configsubdomain.yourdomains1.com",
-          "configsubdomain.yourdomains2.com"
-        ],
-        "server": "dns-local"
-      },
-      {
         "rule_set": [
           "geosite-category-ads-all",
           "geosite-malware",
@@ -53,24 +44,40 @@
       },
       {
         "rule_set": ["geosite-ir"],
-        "server": "dns-direct"
+        "server": "dns-local"
       },
       {
         "domain_suffix": [".ir"],
-        "server": "dns-direct"
+        "server": "dns-local"
       },
       {
-        "outbound": "direct",
-        "server": "dns-direct",
+        "outbound": "any",
+        "server": "dns-local",
         "rewrite_ttl": 20
       }
     ],
-    "final": "dns-remote",
+    "final": "dns-local",
     "reverse_mapping": true,
     "strategy": "prefer_ipv4",
     "independent_cache": true
   },
   "inbounds": [
+    {
+      "type": "socks",
+      "tag": "socks",
+      "listen": "127.0.0.1",
+      "listen_port": 10808,
+      "sniff": true,
+      "sniff_override_destination": false
+    },
+    {
+      "type": "http",
+      "tag": "http",
+      "listen": "127.0.0.1",
+      "listen_port": 10809,
+      "sniff": true,
+      "sniff_override_destination": false
+    },
     {
       "type": "tun",
       "tag": "tun-in",
@@ -81,7 +88,8 @@
       "auto_route": true,
       "strict_route": true,
       "stack": "mixed",
-      "sniff": true
+      "sniff": true,
+      "sniff_override_destination": false
     }
   ],
   "outbounds": [
@@ -95,8 +103,9 @@
       "tag": "⚡️ Auto",
       "outbounds": null,
       "url": "http://www.gstatic.com/generate_204",
-      "interval": "10m",
-      "tolerance": 200
+      "interval": "3m",
+      "tolerance": 50,
+      "interrupt_exist_connections": false
     },
     {
       "type": "direct",
@@ -177,6 +186,10 @@
       {
         "protocol": "dns",
         "outbound": "dns-out"
+      },
+      {
+        "outbound": "dns-out",
+        "port": [53]
       },
       {
         "domain_suffix": [".ir"],
