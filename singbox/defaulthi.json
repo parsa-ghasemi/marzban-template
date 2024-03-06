@@ -22,6 +22,12 @@
       {
         "tag": "dns-local",
         "address": "local",
+        "strategy": "prefer_ipv4",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-localIPv6",
+        "address": "local",
         "strategy": "prefer_ipv6",
         "detour": "direct"
       },
@@ -39,7 +45,7 @@
           "configsubdomain.yourdomains1.com",
           "configsubdomain.yourdomains2.com"
         ],
-        "server": "dns-local"
+        "server": "dns-localIPv6"
       },
       {
         "rule_set": [
