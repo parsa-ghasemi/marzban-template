@@ -15,14 +15,15 @@
       },
       {
         "tag": "dns-direct",
-        "address": "1.1.1.1",
+        "address": "https://1.1.1.1/dns-query",
+        "address_resolver": "dns-local",
         "strategy": "prefer_ipv6",
         "detour": "direct"
         
       },
       {
         "tag": "dns-local",
-        "address": "local",
+        "address": "1.1.1.1",
         "strategy": "prefer_ipv6",
         "detour": "direct"
       },
@@ -66,6 +67,7 @@
       "auto_route": true,
       "strict_route": true,
       "stack": "mixed",
+      "endpoint_independent_nat": true,
       "sniff": true,
       "sniff_override_destination": false
     }
