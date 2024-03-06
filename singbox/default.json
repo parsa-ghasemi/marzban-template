@@ -43,16 +43,11 @@
       },
       {
         "rule_set": ["geosite-ir"],
-        "server": "dns-local"
+        "server": "dns-direct"
       },
       {
         "domain_suffix": [".ir"],
-        "server": "dns-local"
-      },
-      {
-        "outbound": "any",
-        "server": "dns-direct",
-        "rewrite_ttl": 20
+        "server": "dns-direct"
       }
     ],
     "final": "dns-direct",
