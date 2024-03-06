@@ -16,7 +16,6 @@
       {
         "tag": "dns-direct",
         "address": "1.1.1.2",
-        "address_resolver": "dns-local",
         "strategy": "prefer_ipv4",
         "detour": "direct"
       },
@@ -40,7 +39,7 @@
           "configsubdomain.yourdomains1.com",
           "configsubdomain.yourdomains2.com"
         ],
-        "server": "dns-local"
+        "server": "dns-direct"
       },
       {
         "rule_set": [
