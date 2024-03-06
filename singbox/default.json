@@ -63,22 +63,6 @@
   },
   "inbounds": [
     {
-      "type": "socks",
-      "tag": "socks",
-      "listen": "127.0.0.1",
-      "listen_port": 10808,
-      "sniff": true,
-      "sniff_override_destination": false
-    },
-    {
-      "type": "http",
-      "tag": "http",
-      "listen": "127.0.0.1",
-      "listen_port": 10809,
-      "sniff": true,
-      "sniff_override_destination": false
-    },
-    {
       "type": "tun",
       "tag": "tun-in",
       "interface_name": "tun0",
