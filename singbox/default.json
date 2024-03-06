@@ -81,10 +81,9 @@
       "type": "urltest",
       "tag": "⚡️ Auto",
       "outbounds": null,
-      "url": "http://www.gstatic.com/generate_204",
+      "url": "https://www.gstatic.com/generate_204",
       "interval": "3m",
-      "tolerance": 50,
-      "interrupt_exist_connections": false
+      "tolerance": 100
     },
     {
       "type": "direct",
@@ -165,10 +164,6 @@
       {
         "protocol": "dns",
         "outbound": "dns-out"
-      },
-      {
-        "outbound": "dns-out",
-        "port": [53]
       },
       {
         "domain_suffix": [".ir"],
