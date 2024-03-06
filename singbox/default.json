@@ -44,14 +44,14 @@
       },
       {
         "rule_set": ["geosite-ir"],
-        "server": "dns-direct"
+        "server": "dns-local"
       },
       {
         "domain_suffix": [".ir"],
-        "server": "dns-direct"
+        "server": "dns-local"
       }
     ],
-    "final": "dns-direct",
+    "final": "dns-local",
     "reverse_mapping": true,
     "strategy": "prefer_ipv4",
     "independent_cache": true
