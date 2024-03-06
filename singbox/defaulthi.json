@@ -39,7 +39,7 @@
           "configsubdomain.yourdomains1.com",
           "configsubdomain.yourdomains2.com"
         ],
-        "server": "dns-direct"
+        "server": "dns-local"
       },
       {
         "rule_set": [
@@ -52,11 +52,11 @@
       },
       {
         "rule_set": ["geosite-ir"],
-        "server": "dns-direct"
+        "server": "dns-local"
       },
       {
         "domain_suffix": [".ir"],
-        "server": "dns-direct"
+        "server": "dns-local"
       },
       {
         "outbound": "direct",
