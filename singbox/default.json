@@ -15,16 +15,13 @@
       },
       {
         "tag": "dns-direct",
-        "address": "https://1.1.1.1/dns-query",
-        "address_resolver": "dns-local",
+        "address": "1.1.1.1",
         "strategy": "prefer_ipv6",
         "detour": "direct"
-        
       },
       {
         "tag": "dns-local",
         "address": "local",
-        "strategy": "prefer_ipv6",
         "detour": "direct"
       },
       {
@@ -52,11 +49,10 @@
       },
       {
         "outbound": "any",
-        "server": "dns-local",
-        "rewrite_ttl": 20
+        "server": "dns-direct"
       }
     ],
-    "final": "dns-local",
+    "final": "dns-remote",
     "reverse_mapping": true,
     "strategy": "prefer_ipv4",
     "independent_cache": true
@@ -72,7 +68,6 @@
       "auto_route": true,
       "strict_route": true,
       "stack": "mixed",
-      "endpoint_independent_nat": true,
       "sniff": true
     }
   ],
@@ -88,7 +83,8 @@
       "outbounds": null,
       "url": "https://www.gstatic.com/generate_204",
       "interval": "3m",
-      "tolerance": 100
+      "tolerance": 50,
+      "interrupt_exist_connections": false
     },
     {
       "type": "direct",
