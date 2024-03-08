@@ -31,6 +31,13 @@
     ],
     "rules": [
       {
+        "domain": [
+          "github.com",
+          "githubusercontent.com"
+        ],
+        "server": "dns-local"
+      },
+      {
         "rule_set": [
           "geosite-category-ads-all",
           "geosite-malware",
