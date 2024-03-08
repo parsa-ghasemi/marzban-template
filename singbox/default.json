@@ -33,7 +33,7 @@
       {
         "domain": [
           "github.com",
-          "githubusercontent.com"
+          "raw.githubusercontent.com"
         ],
         "server": "dns-local"
       },
