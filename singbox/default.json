@@ -90,8 +90,7 @@
       "outbounds": null,
       "url": "https://www.gstatic.com/generate_204",
       "interval": "3m",
-      "tolerance": 50,
-      "interrupt_exist_connections": false
+      "tolerance": 50
     },
     {
       "type": "direct",
