@@ -32,6 +32,7 @@
     "rules": [
       {
         "domain": [
+          "google.com",
           "github.com",
           "raw.githubusercontent.com"
         ],
