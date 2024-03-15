@@ -9,7 +9,6 @@
       {
         "tag": "dns-remote",
         "address": "https://1.1.1.1/dns-query",
-        "address_resolver": "dns-local",
         "strategy": "prefer_ipv4",
         "detour": "proxy"
       },
@@ -142,8 +141,35 @@
     ],
     "rules": [
       {
-        "protocol": "dns",
-        "outbound": "dns-out"
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "protocol": "dns"
+          },
+          {
+            "port": 53
+          }
+        ],
+        "outbound": "dns"
+      },
+      
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 853
+          },
+          {
+            "network": "udp",
+            "port": 443
+          },
+          {
+            "protocol": "stun"
+          }
+        ],
+        "outbound": "block"
       },
       {
         "domain_suffix": [".ir"],
