@@ -151,7 +151,7 @@
             "port": 53
           }
         ],
-        "outbound": "dns"
+        "outbound": "dns-out"
       },
       
       {
