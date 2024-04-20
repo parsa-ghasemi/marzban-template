@@ -16,7 +16,7 @@
 # مراحل نصب
 1. دانلود فایل template
 ```sh
-sudo wget -N -P /var/lib/marzban/templates/v2ray/ https://raw.githubusercontent.com/WhyMan1/marzban-template/master/v2ray/default-ir.json
+sudo wget -N -P /var/lib/marzban/templates/v2ray/ https://raw.githubusercontent.com/WhyMan1/marzban-template/master/v2ray/default.json
 ```
 2. دستورات زیر رو تو ترمینال سرورتون بزنید:
 ```sh
@@ -24,7 +24,8 @@ sudo nano /opt/marzban/.env
 ```
 و مقادیر زیر رو در فایل `.env` در پوشه `/opt/marzban` قرار بدین
 ```sh
-V2RAY_SUBSCRIPTION_TEMPLATE="v2ray/default-ir.json"
+CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"
+V2RAY_SUBSCRIPTION_TEMPLATE="v2ray/default.json"
 ```
 
 3. ری استارت مرزبان
