@@ -1,3 +1,11 @@
+<p align="center">
+  <a href="https://github.com/oXIIIo/marzban-template/" target="_blank" rel="noopener noreferrer">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Gozargah/Marzban-docs/master/screenshots/logo-dark.png">
+      <img width="160" height="160" src="https://raw.githubusercontent.com/Gozargah/Marzban-docs/master/screenshots/logo-dark.png">
+    </picture>
+  </a>
+</p>
 <h1 align="center"/>xray custom config example for <a href="https://github.com/Gozargah/Marzban">Marzban</a></h1>
 
 ## فهرست مطالب
@@ -6,10 +14,10 @@
 - [مراحل نصب](#مراحل-نصب)
 
 # مقدمه
-تمپلیت کاستوم کانفیگ بهینه شده برای کاربران ایرانی
+تمپلیت کاستوم کانفیگ بهینه شده برای کاربران IR
 
 # ویژگی ها
-- وصل شدن مستقیم به وب‌سایت‌های ایرانی هنگامی که فیلترشکن روشن است
+- وصل شدن مستقیم به وب‌سایت‌های IR هنگامی که فیلترشکن روشن است
 - بلاک کردن تبلیغات
 و ...
 
