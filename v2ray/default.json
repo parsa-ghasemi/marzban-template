@@ -47,12 +47,36 @@
   "outbounds": [],
   "dns": {
     "servers": [
-      "1.1.1.1",
-      "8.8.8.8"
+      "1.1.1.1"
     ]
   },
   "routing": {
-    "domainStrategy": "AsIs",
-    "rules": []
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "type": "field",
+        "outboundTag": "block",
+        "domain": [
+          "geosite:category-ads-all"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "domain": [
+          "domain:ir",
+          "geosite:category-ir",
+          "geosite:private"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "ip": [
+          "geoip:private",
+          "geoip:ir"
+        ]
+      }
+    ]
   }
 }
