@@ -1,44 +1,40 @@
 <p align="center">
-  <a href="https://github.com/WhyMan1/marzban-singbox-template/tree/master/singbox" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/oXIIIo/marzban-template/" target="_blank" rel="noopener noreferrer">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://sing-box.sagernet.org/assets/icon.svg">
-      <img width="160" height="160" src="https://sing-box.sagernet.org/assets/icon.svg">
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Gozargah/Marzban-docs/master/screenshots/logo-dark.png">
+      <img width="160" height="160" src="https://raw.githubusercontent.com/Gozargah/Marzban-docs/master/screenshots/logo-dark.png">
     </picture>
   </a>
 </p>
-<h1 align="center"/>sing-box config example for <a href="https://github.com/Gozargah/Marzban">Marzban</a></h1>
-
-## فهرست مطالب
-- [مقدمه](#مقدمه)
-- [ویژگی‌ ها](#ویژگی-ها)
-- [مراحل نصب](#مراحل-نصب)
-- [لینک دانلود sing-box](#لینک-دانلود-sing-box)
+<h1 align="center"/>تمپلیت های مختلف برای پنل  <a href="https://github.com/Gozargah/Marzban">مرزبان</a></h1>
 
 # مقدمه
-سینگ باکس یک پروکسی مبتنی بر قوانین است که به شما این امکان را می‌دهد که تنظیمات مربوط به برنامه از قبیل DNS و مسیریابی و ... را از سمت سرور انجام دهید. در این template از سمت سرور، سینگ باکس  را به گونه‌ای تنظیم شده است که اتصال به سایت‌های ایرانی به صورت مستقیم انجام شود.
-از مهم ترین ویژگی کلاینت sing-box پشتیبانی از پلتفرم های مختلف مانند اندروید، iOS، macOS و ... می باشد.
+لیستی از تمپلیت های شخصی سازی شده برای مرزبان
 
-# ویژگی ها
-- وصل شدن به سریع ترین کانفیگ
-- وصل شدن مستقیم به وب‌سایت‌های ایرانی هنگامی که فیلترشکن روشن است
-- بلاک کردن تبلیغات
-و ...
+# لیست تمپلیت ها
+- [تمپلیت برای sing-box](https://github.com/WhyMan1/marzban-template/tree/master/singbox)
+- [صفحه سابسکریپشن](https://github.com/WhyMan1/marzban-template/tree/master/subscription)
+- [صفحه خانه](https://github.com/WhyMan1/marzban-template/tree/master/home)
+
 
 # مراحل نصب
-1. دانلود فایل template
+برای نصب هر تمپلیت به صفحه مربوط به آن مراجعه کنید
+
+# نصب همه
+برای نصب همه تمپلیت های موجو دستورات زیر را در ترمینال سرور خود اجرا کنید:
+1. دانلود فایل های تمپلیت
 ```sh
-sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-singbox-template/master/singbox/default.json
-sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-singbox-template/master/singbox/mux_conf.json
+sudo wget -N -P /var/lib/marzban/templates/singbox/ https://raw.githubusercontent.com/WhyMan1/marzban-template/master/singbox/default.json
+sudo wget -N -P /var/lib/marzban/templates/subscription/ https://raw.githubusercontent.com/WhyMan1/marzban-template/master/subscription/index.html
+sudo wget -N -P /var/lib/marzban/templates/home/ https://raw.githubusercontent.com/WhyMan1/marzban-template/master/home/index.html
 ```
 2. دستورات زیر رو تو ترمینال سرورتون بزنید:
 ```sh
-sudo nano /opt/marzban/.env
+echo 'CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"' | sudo tee -a /opt/marzban/.env
 ```
-و مقادیر زیر رو در فایل `.env` در پوشه `/opt/marzban` قرار بدین
+یا مقادیر زیر رو در فایل `.env` در پوشه `/opt/marzban` قرار بدین
 ```sh
 CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"
-SINGBOX_SUBSCRIPTION_TEMPLATE="singbox/default.json"
-SINGBOX_MUX_CONFIGURATION = "singbox/mux_conf.json"
 ```
 
 3. ری استارت مرزبان
@@ -47,20 +43,10 @@ marzban restart
 ```
 
 ## بروزرسانی
-برای بروزرسانی تمپلیت فقط کافیست مرحله ۱ را تکرار کنید.
-
-# لینک دانلود sing-box
-- Android:
-   - [SFA AppCenter](https://install.appcenter.ms/users/nekohasekai/apps/sfa/distribution_groups/publictest)
-   - [SFA Github](https://github.com/SagerNet/sing-box/releases)
-   - [SFA Google Play](https://play.google.com/store/apps/details?id=io.nekohasekai.sfa)
-- iOS:
-  - [SFI](https://apps.apple.com/us/app/sing-box/id6451272673)
-- macOS：
-  - [SFM](https://apps.apple.com/us/app/sing-box/id6451272673)
+برای بروزرسانی تمپلیت ها فقط کافیست مرحله 1 را تکرار کنید.
 
 # حمایت از من
 
-<a href="https://nowpayments.io/donation?api_key=WE3KFT5-2VKMNSF-N1P4YQ6-24N82ZA&source=lk_donation&medium=referral" target="_blank">
+<a href="https://nowpayments.io/donation?api_key=MG750CX-D7AMMH9-QWARQ7V-9ZKH9XQ&source=lk_donation&medium=referral" target="_blank">
   <img src="https://nowpayments.io/images/embeds/donation-button-black.svg" alt="Crypto donation button by NOWPayments">
 </a>
