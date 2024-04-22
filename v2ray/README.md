@@ -28,6 +28,11 @@ sudo wget -N -P /var/lib/marzban/templates/v2ray/ https://raw.githubusercontent.
 ```
 2. دستورات زیر رو تو ترمینال سرورتون بزنید:
 ```sh
+echo 'CUSTOM_TEMPLATES_DIRECTORY="/var/lib/marzban/templates/"' | sudo tee -a /opt/marzban/.env
+echo 'V2RAY_SUBSCRIPTION_TEMPLATE="v2ray/default.json"' | sudo tee -a /opt/marzban/.env
+```
+یا از این طریق فایل را ادیت کرده و اضافه کنید
+```sh
 sudo nano /opt/marzban/.env
 ```
 و مقادیر زیر رو در فایل `.env` در پوشه `/opt/marzban` قرار بدین
