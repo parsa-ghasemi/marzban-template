@@ -1,8 +1,8 @@
 <p align="center">
-  <a href="https://github.com/oXIIIo/marzban-template/tree/master/subscription" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/WhyMan1/marzban-template/tree/master/subscription" target="_blank" rel="noopener noreferrer">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oXIIIo/marzban-template/master/subscription/preview.jpg">
-      <img width="372" height="408" src="https://raw.githubusercontent.com/oXIIIo/marzban-template/master/subscription/preview.jpg">
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/WhyMan1/marzban-template/master/subscription/PreviewTemplate.png">
+      <img width="372" height="408" src="https://raw.githubusercontent.com/WhyMan1/marzban-template/master/subscription/PreviewTemplate.png">
     </picture>
   </a>
 </p>
@@ -22,7 +22,7 @@
 # مراحل نصب
 1. دانلود فایل template
 ```sh
-sudo wget -N -P /var/lib/marzban/templates/subscription/ https://raw.githubusercontent.com/oXIIIo/marzban-template/master/subscription/index.html
+sudo wget -N -P /var/lib/marzban/templates/subscription/ https://raw.githubusercontent.com/WhyMan1/marzban-template/master/subscription/index.html
 ```
 
 2. دستورات زیر رو تو ترمینال سرورتون بزنید:
@@ -45,10 +45,10 @@ marzban restart
 برای بروزرسانی تمپلیت فقط کافیست مرحله 1 را تکرار کنید.
 
 ## کپی رایت
-این قالب بر اساس طرح [Profile Card](https://codepen.io/fredoist/pen/eNpvbr) در CodePen ساخته شده است.
+این قالب توسط  https://github.com/x0sina/marzban-sub ساخته شده است.
 
 # حمایت از من
 
-<a href="https://nowpayments.io/donation?api_key=MG750CX-D7AMMH9-QWARQ7V-9ZKH9XQ&source=lk_donation&medium=referral" target="_blank">
+<a href="https://nowpayments.io/donation?api_key=WE3KFT5-2VKMNSF-N1P4YQ6-24N82ZA&source=lk_donation&medium=referral" target="_blank">
   <img src="https://nowpayments.io/images/embeds/donation-button-black.svg" alt="Crypto donation button by NOWPayments">
 </a>
