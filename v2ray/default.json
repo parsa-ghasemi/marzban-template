@@ -64,7 +64,7 @@
         "type": "field",
         "outboundTag": "direct",
         "domain": [
-          "domain:ir",
+          "regexp:.*\\.ir",
           "geosite:private"
         ]
       },
