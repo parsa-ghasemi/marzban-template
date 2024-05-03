@@ -12,7 +12,14 @@
       },
       {
         "tag": "dns-local",
-        "address": "https://178.22.122.100/dns-query",
+        "address": "https://free.shecan.ir/dns-query",       
+        "address_resolver": "dns-resolver",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-resolver",
+        "address": "178.22.122.100",       
+        "address_resolver": "dns-resolver",
         "detour": "direct"
       },
       {
