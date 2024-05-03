@@ -20,7 +20,6 @@
       {
         "tag": "dns-resolver",
         "address": "178.22.122.100",
-        "address_resolver": "dns-resolver",
         "detour": "direct"
       },
       {
