@@ -44,11 +44,6 @@
     "reverse_mapping": true,
     "independent_cache": true
   },
-  "ntp": {
-    "enabled": true,
-    "server": "pool.ntp.org",
-    "detour": "direct"
-  },
   "inbounds": [
     {
       "type": "tun",
