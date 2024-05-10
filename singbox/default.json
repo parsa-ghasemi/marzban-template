@@ -44,6 +44,10 @@
     "reverse_mapping": true,
     "independent_cache": true
   },
+  "ntp": {
+    "enabled": false,
+    "server": "pool.ntp.org"
+  },
   "inbounds": [
     {
       "type": "tun",
@@ -111,9 +115,6 @@
           {
             "network": "udp",
             "port": 443
-          },
-          {
-            "protocol": "stun"
           }
         ],
         "outbound": "block"
