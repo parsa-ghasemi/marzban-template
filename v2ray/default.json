@@ -16,7 +16,7 @@
         "rules": [
             {
                 "domain": [
-                    "geosite:category-ads-all""
+                    "geosite:category-ads-all"
                 ],
                 "outboundTag": "block"
             },
@@ -30,6 +30,7 @@
             },
             {
                 "ip": [
+                    "geoip:ir"
                     "geoip:private"
                 ],
                 "outboundTag": "direct"
