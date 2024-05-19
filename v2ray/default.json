@@ -30,7 +30,7 @@
             },
             {
                 "ip": [
-                    "geoip:ir"
+                    "geoip:ir",
                     "geoip:private"
                 ],
                 "outboundTag": "direct"
