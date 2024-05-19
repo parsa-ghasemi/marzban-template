@@ -67,6 +67,7 @@
     {
       "type": "selector",
       "tag": "proxy",
+      "interrupt_exist_connections": true,
       "outbounds": null
     },
     {
