@@ -60,7 +60,7 @@
       "strict_route": true,
       "stack": "mixed",
       "sniff": true,
-      "sniff_override_destination": true
+      "sniff_override_destination": false
     }
   ],
   "outbounds": [
@@ -232,6 +232,9 @@
     "cache_file": {
       "enabled": true,
       "store_fakeip": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090"
     }
   }
 }
