@@ -5,8 +5,9 @@
     "dns": {
         "queryStrategy": "UseIP",
         "servers": [
-            "1.1.1.1",
-            "localhost"
+            {
+                "address": "1.1.1.1"
+            }
         ],
         "tag": "dns_out"
     },
