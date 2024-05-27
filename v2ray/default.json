@@ -5,14 +5,7 @@
     "dns": {
         "queryStrategy": "UseIP",
         "servers": [
-            "1.1.1.1",
-            {
-                "address": "https://free.shecan.ir/dns-query",
-                "domains": [
-                    "regexp:.*\\.ir",
-                    "domain:.ir"
-                ]
-            }
+            "https://1.1.1.1/dns-query",
         ],
         "tag": "dns_out"
     },
